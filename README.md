@@ -1,24 +1,13 @@
-# README
+# RD test site!
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This site is here: http://rd-test-site.gebender.com.br if you want to see your self how it works :)
+To install in your own development just follow the steps listed below.
 
-Things you may want to cover:
 
-* Ruby version
+# Minimum Requirements
 
-* System dependencies
+This'll be update soon
 
-* Configuration
+## steps, steps, steps
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+This'll be update soon

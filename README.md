@@ -1,6 +1,6 @@
 # RD test app!
 
-This site is here: http://rd-test-site.gebender.com.br if you want to see your self how it works :)
+This site is here: https://dry-stream-85970.herokuapp.com/ if you want to see your self how it works :)
 To install in your own development just follow the steps listed below.
 
 

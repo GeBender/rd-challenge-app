@@ -25,6 +25,7 @@ class HistoriesController < ApplicationController
   # POST /histories.json
   def create
     @history = History.new(history_params)
+    @history.contact_id = Contact.find_by(:id_hash => params[:id_hash]).id
 
     respond_to do |format|
       if @history.save
@@ -69,6 +70,6 @@ class HistoriesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def history_params
-      params.require(:history).permit(:datetime, :url, :contact_id)
+      params.require(:history).permit(:url)
     end
 end

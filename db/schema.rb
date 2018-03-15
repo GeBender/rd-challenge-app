@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180315193445) do
+ActiveRecord::Schema.define(version: 20180315214208) do
 
   create_table "contacts", force: :cascade do |t|
     t.string "id_hash"
@@ -20,7 +20,6 @@ ActiveRecord::Schema.define(version: 20180315193445) do
   end
 
   create_table "histories", force: :cascade do |t|
-    t.datetime "datetime"
     t.string "url"
     t.integer "contact_id"
     t.datetime "created_at", null: false

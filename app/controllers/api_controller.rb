@@ -1,11 +1,7 @@
-class ApplicationController < ActionController::Base
-  before_action :authenticate_request, if: -> { is_json? }, :except => [:authenticate]
+class ApiController < ActionController::Base
+  before_action :authenticate_request
   
   attr_reader :current_user 
-
-  def is_json?
-    request.format == :json
-  end
 
   private 
 
@@ -13,5 +9,4 @@ class ApplicationController < ActionController::Base
       @current_user = AuthorizeApiRequest.call(request.headers).result 
       render json: { error: 'Not Authorized' }, status: 401 unless @current_user 
     end
-
 end

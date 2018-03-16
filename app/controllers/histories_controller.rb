@@ -25,7 +25,8 @@ class HistoriesController < ApplicationController
   # POST /histories.json
   def create
     @history = History.new(history_params)
-    @history.contact_id = Contact.find_by(:id_hash => params[:id_hash]).id
+    decoded_id = JsonWebToken.decode(params[:contact_id])
+    @history.contact_id = Contact.find(decoded_id[:id_hash]).id
 
     respond_to do |format|
       if @history.save

@@ -10,18 +10,28 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180315214208) do
+ActiveRecord::Schema.define(version: 20180316160454) do
 
   create_table "contacts", force: :cascade do |t|
     t.string "id_hash"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "email"
+    t.integer "partner_id"
+    t.string "name"
   end
 
   create_table "histories", force: :cascade do |t|
     t.string "url"
     t.integer "contact_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "partners", force: :cascade do |t|
+    t.string "name"
+    t.string "email"
+    t.string "password_digest"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

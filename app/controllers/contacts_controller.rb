@@ -24,7 +24,7 @@ class ContactsController < ApplicationController
   # POST /contacts
   # POST /contacts.json
   def create
-    @contact = Contact.new(contact_params)
+    @contact = Contact.find_or_initialize_by(contact_params)
 
     respond_to do |format|
       if @contact.save
@@ -67,11 +67,12 @@ class ContactsController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_contact
-      @contact = Contact.find(params[:id])
+      decoded = JsonWebToken.decode(Base64.decode64(params[:id]))
+      @contact = Contact.find(decoded[:id_hash])
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def contact_params
-      params.require(:contact).permit(:email, :id_hash)
+      params.require(:contact).permit(:name, :email, :partner_id)
     end
 end

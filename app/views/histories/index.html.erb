@@ -31,6 +31,7 @@
                                 <table class="table table-striped table-bordered">
                                   <thead>
                                     <tr>
+                                      <th>Id</th>
                                       <th>Url</th>
                                       <th>Data</th>
                                       <th>Hora</th>
@@ -40,6 +41,7 @@
                                   <tbody>
                                     <% @contact.histories.each do |history| %>
                                       <tr>
+                                        <td><%= @contact.id %></td>
                                         <td><%= history.url %></td>
                                         <td><%= history.created_at.strftime('%d/%m/%Y') %></td>
                                         <td><%= history.created_at.strftime('%H:%M') %></td>

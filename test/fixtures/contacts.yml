@@ -1,9 +1,12 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
+  partner: one
   email: MyString
   id_hash: MyString
 
 two:
+  partner: two
   email: MyString
   id_hash: MyString
+

@@ -5,10 +5,6 @@ class HistoriesControllerTest < ActionDispatch::IntegrationTest
     @history = histories(:one)
   end
 
-  test "should get index" do
-    get histories_url
-    assert_response :success
-  end
 
   test "should get new" do
     get new_history_url

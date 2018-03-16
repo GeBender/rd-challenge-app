@@ -15,7 +15,6 @@
   <tbody>
     <% @histories.each do |history| %>
       <tr>
-        <td><%= history.datetime %></td>
         <td><%= history.url %></td>
         <td><%= history.contact_id %></td>
         <td><%= link_to 'Show', history %></td>

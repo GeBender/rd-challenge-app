@@ -15,14 +15,6 @@ class HistoriesControllerTest < ActionDispatch::IntegrationTest
     assert_response :success
   end
 
-  test "should create history" do
-    assert_difference('History.count') do
-      post histories_url, params: { history: { contact_id: @history.contact_id, datetime: @history.datetime, url: @history.url } }
-    end
-
-    assert_redirected_to history_url(History.last)
-  end
-
   test "should show history" do
     get history_url(@history)
     assert_response :success
@@ -31,11 +23,6 @@ class HistoriesControllerTest < ActionDispatch::IntegrationTest
   test "should get edit" do
     get edit_history_url(@history)
     assert_response :success
-  end
-
-  test "should update history" do
-    patch history_url(@history), params: { history: { contact_id: @history.contact_id, datetime: @history.datetime, url: @history.url } }
-    assert_redirected_to history_url(@history)
   end
 
   test "should destroy history" do

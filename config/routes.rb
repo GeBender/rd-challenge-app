@@ -4,5 +4,4 @@ Rails.application.routes.draw do
 
 	# root 'application#hello'
   post 'authenticate', to: 'authentication#authenticate'
-  get 'authenticate', to: 'authentication#authenticate'
 end

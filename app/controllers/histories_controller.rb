@@ -4,7 +4,7 @@ class HistoriesController < ApplicationController
   # GET /histories
   # GET /histories.json
   def index
-    @histories = History.all
+    @contact = Contact.find(params[:contact])
   end
 
   # GET /histories/1

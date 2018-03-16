@@ -31,7 +31,9 @@
                                 <table class="table table-striped table-bordered">
                                   <thead>
                                     <tr>
+                                      <th>Id</th>
                                       <th>Pages</th>
+                                      <th>Lest ping</th>
                                       <th></th>
                                     </tr>
                                   </thead>
@@ -39,7 +41,9 @@
                                   <tbody>
                                     <% @contacts.each do |contact| %>
                                       <tr>
+                                        <td><%= contact.id %></td>
                                         <td><%= contact.histories.count %></td>
+                                        <td><%= contact.updated_at.strftime('%d/%m/%Y') %> at <%= contact.updated_at.strftime('%H/%M') %></td>
                                         <td><a href="/contact-history/<%= contact.id %>" class='btn btn-primary btn-sm'><i class="fa fa-list"></i> List pages</button></td>
                                       </tr>
                                     <% end %>

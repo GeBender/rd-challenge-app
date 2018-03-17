@@ -1,6 +1,6 @@
 # RD test App!
 
-This production app is here: dry-stream-85970.herokuapp.com if you want to see your self how it works. 
+This production app is here: http://dry-stream-85970.herokuapp.com if you want to see your self how it works. 
 
 To install in your own development just follow the steps listed below.
 

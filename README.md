@@ -20,7 +20,7 @@ Now, we must create a Partner, with credentials to post some navigation data int
 ### Run the server
     $ rails s
 
-Now you just need to open your bronwser, put the RD test app addres: `htto://localhost:3000` to view the app. Now go to the RD Test site repo (https://github.com/GeBender/rd-challenge-site) and follow the steps there to run it and register some navigation. 
+Now you just need to open your bronwser, put the RD test app addres: `http://localhost:3000` to view the app. Now go to the RD Test site repo (https://github.com/GeBender/rd-challenge-site) and follow the steps there to run it and register some navigation. 
 
 ## :-)
 

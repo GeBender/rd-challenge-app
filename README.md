@@ -15,7 +15,7 @@ Now, we must create a Partner, with credentials to post some navigation data int
 
 ### Migrate de database
 
-    $ make db:migrate
+    $ rake db:migrate
 
 ### Open the rails console and save one partner
     $ rails console
